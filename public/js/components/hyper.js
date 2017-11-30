@@ -52,9 +52,13 @@ var _Header = __webpack_require__(13);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _TopImg = __webpack_require__(14);
+var _TopImg = __webpack_require__(15);
 
 var _TopImg2 = _interopRequireDefault(_TopImg);
+
+var _OurStory = __webpack_require__(14);
+
+var _OurStory2 = _interopRequireDefault(_OurStory);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -69,7 +73,8 @@ function App(_ref) {
       'div',
       null,
       (0, _hyperapp.h)(_Header2.default, { state: state, actions: actions }),
-      (0, _hyperapp.h)(_TopImg2.default, { state: state, actions: actions })
+      (0, _hyperapp.h)(_TopImg2.default, { state: state, actions: actions }),
+      (0, _hyperapp.h)(_OurStory2.default, { state: state, actions: actions })
     )
   );
 }
@@ -114,31 +119,35 @@ function Header(_ref) {
     null,
     (0, _hyperapp.h)(
       "div",
-      { "class": "logo" },
-      "Logo"
-    ),
-    (0, _hyperapp.h)(
-      "nav",
-      null,
+      { "class": "container" },
       (0, _hyperapp.h)(
-        "a",
-        { href: "#" },
-        "Menu"
+        "div",
+        { "class": "logo" },
+        "Logo"
       ),
       (0, _hyperapp.h)(
-        "a",
-        { href: "#" },
-        "Locations"
-      ),
-      (0, _hyperapp.h)(
-        "a",
-        { href: "#" },
-        "Catering"
-      ),
-      (0, _hyperapp.h)(
-        "a",
-        { href: "#" },
-        "Reservations"
+        "nav",
+        null,
+        (0, _hyperapp.h)(
+          "a",
+          { href: "#" },
+          "Menu"
+        ),
+        (0, _hyperapp.h)(
+          "a",
+          { href: "#" },
+          "Locations"
+        ),
+        (0, _hyperapp.h)(
+          "a",
+          { href: "#" },
+          "Catering"
+        ),
+        (0, _hyperapp.h)(
+          "a",
+          { href: "#" },
+          "Reservations"
+        )
       )
     )
   );
@@ -148,6 +157,87 @@ function Header(_ref) {
 
 /***/ }),
 /* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = OurStory;
+
+var _hyperapp = __webpack_require__(0);
+
+function OurStory(_ref) {
+  var state = _ref.state,
+      actions = _ref.actions;
+
+  return (0, _hyperapp.h)(
+    "section",
+    { id: "OurStory" },
+    (0, _hyperapp.h)(
+      "div",
+      { "class": "container" },
+      (0, _hyperapp.h)(
+        "div",
+        { "class": "row" },
+        (0, _hyperapp.h)(
+          "div",
+          { "class": "col-md-6" },
+          (0, _hyperapp.h)(
+            "h5",
+            { "class": "title" },
+            "Our Story"
+          ),
+          (0, _hyperapp.h)(
+            "h2",
+            null,
+            "Cooking is the Art of Adjustment"
+          ),
+          (0, _hyperapp.h)(
+            "p",
+            null,
+            "Escape the hustle and bustle by ducking into the cool, dark atmosphere of The Honor Bar in Beverly Hills, a cozy little nook tucked next to the South Beverly Grill. Relax with a crisp martini and one of our delectable sandwiches. The highlight here is surely the French fries, served piping hot in a silver julep cup. Walk-ins only."
+          ),
+          (0, _hyperapp.h)(
+            "div",
+            { "class": "quote" },
+            (0, _hyperapp.h)(
+              "i",
+              null,
+              "  \"Nobody knows how to make a more crowd-pleasing sandwich better than these guys\" - ",
+              (0, _hyperapp.h)(
+                "strong",
+                null,
+                "Marisa Dunn"
+              )
+            )
+          ),
+          (0, _hyperapp.h)(
+            "a",
+            { href: "#", "class": "reserve-btn" },
+            "Reserve"
+          )
+        ),
+        (0, _hyperapp.h)(
+          "div",
+          { "class": "col-md-6" },
+          (0, _hyperapp.h)(
+            "div",
+            { "class": "video-img" },
+            (0, _hyperapp.h)("img", { src: "https://s3.amazonaws.com/siteninja/multitenant/images/61863/images/original/Screen_Shot_2016-06-29_at_4.53.14_PM.png?1467244440" })
+          )
+        )
+      )
+    )
+  );
+}
+// <Header state={state} actions={actions}/>
+// <Button state={state} actions={actions}/>
+
+/***/ }),
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -166,50 +256,54 @@ function TopImg(_ref) {
 
   return (0, _hyperapp.h)(
     "section",
-    { "class": "TopImg" },
+    { id: "TopImg" },
     (0, _hyperapp.h)(
       "div",
-      { "class": "title" },
-      (0, _hyperapp.h)(
-        "h5",
-        null,
-        "Welcome"
-      ),
-      (0, _hyperapp.h)(
-        "h1",
-        null,
-        "Be Honored"
-      )
-    ),
-    (0, _hyperapp.h)(
-      "div",
-      { "class": "contact-info" },
+      { "class": "container" },
       (0, _hyperapp.h)(
         "div",
-        { "class": "booking" },
-        "Book Table Directly"
-      ),
-      (0, _hyperapp.h)(
-        "h2",
-        null,
-        "(408) 768 9986"
+        { "class": "title" },
+        (0, _hyperapp.h)(
+          "h5",
+          null,
+          "Welcome"
+        ),
+        (0, _hyperapp.h)(
+          "h1",
+          null,
+          "Be Honored"
+        )
       ),
       (0, _hyperapp.h)(
         "div",
-        { "class": "hours" },
-        "Opening hours: ",
+        { "class": "contact-info" },
         (0, _hyperapp.h)(
-          "strong",
-          null,
-          "MON-FRI:"
+          "div",
+          { "class": "booking" },
+          "Book Table Directly"
         ),
-        " 09:00-21:00/",
         (0, _hyperapp.h)(
-          "strong",
+          "h2",
           null,
-          "WEEKEND: "
+          "(408) 768 9986"
         ),
-        "09:00-22:00"
+        (0, _hyperapp.h)(
+          "div",
+          { "class": "hours" },
+          "Opening hours: ",
+          (0, _hyperapp.h)(
+            "strong",
+            null,
+            "MON-FRI:"
+          ),
+          " 09:00-21:00/",
+          (0, _hyperapp.h)(
+            "strong",
+            null,
+            "WEEKEND: "
+          ),
+          "09:00-22:00"
+        )
       )
     )
   );
@@ -218,7 +312,7 @@ function TopImg(_ref) {
 // <Button state={state} actions={actions}/>
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -265,4 +359,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 });
 
 /***/ })
-],[15]);
+],[16]);
