@@ -12,6 +12,7 @@
       font-size: 4rem;
       font-weight: 300;
       font-family: 'Rozha One', sans-serif;
+      text-transform: uppercase;
     }
 
     h5 {
@@ -29,9 +30,21 @@
     line-height: 1.5;
     strong {
       font-weight: 700;
+      color: #fff;
+    }
+    .booking {
+      margin-bottom: 10px;
+      color: #a0a0a0;
     }
     h2 {
       font-size: 2rem;
+      font-family: 'Rozha One', sans-serif;
+    }
+    .hours {
+      margin-top: 15px;
+      text-transform: uppercase;
+      color: #a0a0a0;
+      letter-spacing: 4px;
     }
   }
 }
