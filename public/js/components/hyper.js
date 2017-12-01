@@ -52,13 +52,17 @@ var _Header = __webpack_require__(13);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _TopImg = __webpack_require__(15);
+var _TopImg = __webpack_require__(16);
 
 var _TopImg2 = _interopRequireDefault(_TopImg);
 
 var _OurStory = __webpack_require__(14);
 
 var _OurStory2 = _interopRequireDefault(_OurStory);
+
+var _SpecialMenu = __webpack_require__(15);
+
+var _SpecialMenu2 = _interopRequireDefault(_SpecialMenu);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -74,7 +78,8 @@ function App(_ref) {
       null,
       (0, _hyperapp.h)(_Header2.default, { state: state, actions: actions }),
       (0, _hyperapp.h)(_TopImg2.default, { state: state, actions: actions }),
-      (0, _hyperapp.h)(_OurStory2.default, { state: state, actions: actions })
+      (0, _hyperapp.h)(_OurStory2.default, { state: state, actions: actions }),
+      (0, _hyperapp.h)(_SpecialMenu2.default, { state: state, actions: actions })
     )
   );
 }
@@ -246,6 +251,136 @@ function OurStory(_ref) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.default = SpecialMenu;
+
+var _hyperapp = __webpack_require__(0);
+
+function SpecialMenu(_ref) {
+  var state = _ref.state,
+      actions = _ref.actions;
+
+  return (0, _hyperapp.h)(
+    "section",
+    { id: "SpecialMenu" },
+    (0, _hyperapp.h)(
+      "div",
+      { "class": "container" },
+      (0, _hyperapp.h)(
+        "h5",
+        { "class": "title" },
+        "Special Menu"
+      ),
+      (0, _hyperapp.h)(
+        "h2",
+        null,
+        "Honorable Flavor of Winter"
+      ),
+      (0, _hyperapp.h)(
+        "div",
+        { "class": "row" },
+        (0, _hyperapp.h)(
+          "div",
+          { "class": "col-md-4" },
+          (0, _hyperapp.h)(
+            "div",
+            { "class": "box" },
+            (0, _hyperapp.h)(
+              "div",
+              { "class": "box-image1" },
+              (0, _hyperapp.h)(
+                "div",
+                { "class": "price-circle" },
+                "$15"
+              )
+            ),
+            (0, _hyperapp.h)(
+              "span",
+              { "class": "title" },
+              "Honor Burger"
+            ),
+            (0, _hyperapp.h)(
+              "p",
+              { "class": "details" },
+              "Fresh ground chuck, cheddar & tomato, topped with coleslaw"
+            )
+          )
+        ),
+        (0, _hyperapp.h)(
+          "div",
+          { "class": "col-md-4" },
+          (0, _hyperapp.h)(
+            "div",
+            { "class": "box" },
+            (0, _hyperapp.h)(
+              "div",
+              { "class": "box-image2" },
+              (0, _hyperapp.h)(
+                "div",
+                { "class": "price-circle" },
+                "$14"
+              )
+            ),
+            (0, _hyperapp.h)(
+              "span",
+              { "class": "title" },
+              "Veggie Club"
+            ),
+            (0, _hyperapp.h)(
+              "p",
+              { "class": "details" },
+              "Persian cucumber, French feta, avocado, arugula & pickled onion"
+            )
+          )
+        ),
+        (0, _hyperapp.h)(
+          "div",
+          { "class": "col-md-4" },
+          (0, _hyperapp.h)(
+            "div",
+            { "class": "box" },
+            (0, _hyperapp.h)(
+              "div",
+              { "class": "box-image3" },
+              (0, _hyperapp.h)(
+                "div",
+                { "class": "price-circle" },
+                "$5"
+              )
+            ),
+            (0, _hyperapp.h)(
+              "span",
+              { "class": "title" },
+              "Hand-Cut French Fries"
+            ),
+            (0, _hyperapp.h)(
+              "p",
+              { "class": "details" },
+              "U.S.#1 Kennebec potatoes, served with dipping sauces"
+            )
+          )
+        )
+      ),
+      (0, _hyperapp.h)(
+        "a",
+        { href: "#" },
+        "View Full Menu"
+      )
+    )
+  );
+}
+// <Header state={state} actions={actions}/>
+// <Button state={state} actions={actions}/>
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.default = TopImg;
 
 var _hyperapp = __webpack_require__(0);
@@ -312,7 +447,7 @@ function TopImg(_ref) {
 // <Button state={state} actions={actions}/>
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -359,4 +494,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 });
 
 /***/ })
-],[16]);
+],[17]);

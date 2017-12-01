@@ -1,0 +1,63 @@
+#SpecialMenu {
+  padding: 100px 200px;
+  @import "global.scss";
+  text-align: center;
+  background-image: url("https://i.pinimg.com/originals/2a/55/2d/2a552daa2d6ddf1e992e3e014af1ca0f.jpg");
+  background-position: center;
+  h5 {
+    color: #000;
+  }
+  .box {
+    background: white;
+    padding: 20px;
+    .box-image1, .box-image2, .box-image3 {
+      height: 200px;
+      position: relative;
+      margin-bottom: 50px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .box-image1 {
+      background-image: url("https://i.pinimg.com/originals/ec/6d/b9/ec6db9d1bd3dc49d2bf085df7d52f92c.png");
+    }
+    .box-image2 {
+      background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/0e/5d/40/ed/veggie-club.jpg");
+    }
+    .box-image3 {
+      background-image: url("https://itsjoulife.files.wordpress.com/2013/07/honorbar_fries.jpg");
+      background-position: top;
+    }
+    .price-circle {
+      position: absolute;
+      background: #fff;
+      border: 10px solid rgba(255,255,255, 0.7);
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      font-family: 'Rozha One', sans-serif;
+      left: 50%;
+      transform: translate(-50%,50%);
+      bottom: 0;
+      box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.41);
+    }
+    .title {
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 10px 0;
+    }
+    .details {
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.5;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+}
