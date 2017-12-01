@@ -261,7 +261,7 @@ function SpecialMenu(_ref) {
 
   return (0, _hyperapp.h)(
     "section",
-    { id: "SpecialMenu" },
+    { id: "SpecialMenu", "class": "texture" },
     (0, _hyperapp.h)(
       "div",
       { "class": "container" },

@@ -1,5 +1,5 @@
 h5 {
-  color: #a0a0a0;
+  color: $titleColor;
   font-size: 0.7rem;
   text-transform: uppercase;
   margin: 2rem 0 1rem;
@@ -10,4 +10,10 @@ h2 {
   font-size: 3rem;
   font-family: 'Rozha One', sans-serif;
   margin: 0.5rem 0 2rem;
+  color: $blackTitle;
+}
+
+.texture {
+  background-image: url("https://i.pinimg.com/originals/2a/55/2d/2a552daa2d6ddf1e992e3e014af1ca0f.jpg");
+  background-position: center;
 }

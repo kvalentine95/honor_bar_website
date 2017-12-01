@@ -3,18 +3,18 @@
   @import "global.scss";
   p {
     font-size: 1.1rem;
-    color: #a0a0a0;
+    color: $paragraphColor;
     line-height: 1.8;
     margin: 0.5rem 0 2rem;
   }
 
   .quote {
-    color: #a0a0a0;
+    color: $paragraphColor;
     margin-bottom: 2rem;
     line-height: 1.8;
     strong {
       font-weight: 700;
-      color: black;
+      color: $blackTitle;
 
     }
   }
@@ -24,7 +24,7 @@
     border: 1px solid black;
     text-align: center;
     text-decoration: none;
-    color: black;
+    color: $blackTitle;
     text-transform: uppercase;
     font-family: 'Rozha One', sans-serif;
     transition: all .5s ease-in-out;
