@@ -277,7 +277,7 @@ function SpecialMenu(_ref) {
       ),
       (0, _hyperapp.h)(
         "div",
-        { "class": "row" },
+        { "class": "row boxes" },
         (0, _hyperapp.h)(
           "div",
           { "class": "col-md-4" },

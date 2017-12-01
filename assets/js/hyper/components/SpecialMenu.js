@@ -6,7 +6,7 @@ export default function SpecialMenu({state, actions}) {
       <div class="container">
         <h5 class="title">Special Menu</h5>
         <h2>Honorable Flavor of Winter</h2>
-        <div class="row">
+        <div class="row boxes">
           <div class="col-md-4">
             <div class="box">
               <div class="box-image1">
