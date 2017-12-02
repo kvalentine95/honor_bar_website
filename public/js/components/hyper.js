@@ -52,7 +52,7 @@ var _Header = __webpack_require__(13);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _TopImg = __webpack_require__(17);
+var _TopImg = __webpack_require__(18);
 
 var _TopImg2 = _interopRequireDefault(_TopImg);
 
@@ -60,13 +60,17 @@ var _OurStory = __webpack_require__(14);
 
 var _OurStory2 = _interopRequireDefault(_OurStory);
 
-var _SpecialMenu = __webpack_require__(16);
+var _SpecialMenu = __webpack_require__(17);
 
 var _SpecialMenu2 = _interopRequireDefault(_SpecialMenu);
 
 var _RandomQuote = __webpack_require__(15);
 
 var _RandomQuote2 = _interopRequireDefault(_RandomQuote);
+
+var _Reviews = __webpack_require__(16);
+
+var _Reviews2 = _interopRequireDefault(_Reviews);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -84,7 +88,8 @@ function App(_ref) {
       (0, _hyperapp.h)(_TopImg2.default, { state: state, actions: actions }),
       (0, _hyperapp.h)(_OurStory2.default, { state: state, actions: actions }),
       (0, _hyperapp.h)(_SpecialMenu2.default, { state: state, actions: actions }),
-      (0, _hyperapp.h)(_RandomQuote2.default, { state: state, actions: actions })
+      (0, _hyperapp.h)(_RandomQuote2.default, { state: state, actions: actions }),
+      (0, _hyperapp.h)(_Reviews2.default, { state: state, actions: actions })
     )
   );
 }
@@ -273,12 +278,12 @@ function RandomQuote(_ref) {
       (0, _hyperapp.h)(
         "h1",
         null,
-        "\u201CUntil I discovered cooking, I was never really interested in anything.\u201D"
+        "\u201CGreat cooking favors the prepared hands\u201D"
       ),
       (0, _hyperapp.h)(
         "span",
         { "class": "author" },
-        "- Julia Child -"
+        "- Jacques Pepin -"
       )
     )
   );
@@ -288,6 +293,76 @@ function RandomQuote(_ref) {
 
 /***/ }),
 /* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Reviews;
+
+var _hyperapp = __webpack_require__(0);
+
+function Reviews(_ref) {
+  var state = _ref.state,
+      actions = _ref.actions;
+
+  return (0, _hyperapp.h)(
+    "section",
+    { id: "Reviews" },
+    (0, _hyperapp.h)(
+      "div",
+      { "class": "container" },
+      (0, _hyperapp.h)(
+        "div",
+        { "class": "row" },
+        (0, _hyperapp.h)(
+          "div",
+          { "class": "col-md-8 chef" },
+          (0, _hyperapp.h)("img", { src: "http://cdn.playbuzz.com/cdn/76d5533e-7e04-48ca-973e-8e05c34428ca/61a58a6a-7780-41d5-ac94-77891e70c103.jpg" })
+        ),
+        (0, _hyperapp.h)(
+          "div",
+          { "class": "col-md-4" },
+          (0, _hyperapp.h)(
+            "h5",
+            { "class": "comp-title" },
+            "Reviews"
+          ),
+          (0, _hyperapp.h)(
+            "h2",
+            null,
+            "The Food Network"
+          ),
+          (0, _hyperapp.h)(
+            "h4",
+            null,
+            "\"Best restaurant in the LA area\""
+          ),
+          (0, _hyperapp.h)(
+            "p",
+            null,
+            "Honor Bar is a nice and chill bar. Gets a good deal of traffic based on where it is and since I live in the neighborhood it's easy to say because there really aren't very many bars at all in the Beverly Hills area that makes sense. The Ambiance is really cool. They are usually showing a game of some sort so it gives you that sports bar feel a little bit on the upscale side. Decently priced food and drinks. As well as the fact the food itself is pretty good. I find myself here all the time. If you're in the area it is definitely recommended."
+          ),
+          (0, _hyperapp.h)("div", { "class": "author" }),
+          (0, _hyperapp.h)(
+            "div",
+            { "class": "arrows" },
+            (0, _hyperapp.h)("i", { "class": "fa fa-arrow-left", "aria-hidden": "true" }),
+            (0, _hyperapp.h)("i", { "class": "fa fa-arrow-right ready", "aria-hidden": "true" })
+          )
+        )
+      )
+    )
+  );
+}
+// <Header state={state} actions={actions}/>
+// <Button state={state} actions={actions}/>
+
+/***/ }),
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -417,7 +492,7 @@ function SpecialMenu(_ref) {
 // <Button state={state} actions={actions}/>
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -492,7 +567,7 @@ function TopImg(_ref) {
 // <Button state={state} actions={actions}/>
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -539,4 +614,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 });
 
 /***/ })
-],[18]);
+],[19]);

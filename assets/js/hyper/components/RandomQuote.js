@@ -4,8 +4,8 @@ export default function RandomQuote({state, actions}) {
   return (
     <section id="RandomQuote">
       <div class="container">
-        <h1>“Until I discovered cooking, I was never really interested in anything.”</h1>
-        <span class="author">- Julia Child -</span>
+        <h1>“Great cooking favors the prepared hands”</h1>
+        <span class="author">- Jacques Pepin -</span>
       </div>
     </section>
   )

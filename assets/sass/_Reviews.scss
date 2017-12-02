@@ -1,0 +1,40 @@
+#Reviews {
+  text-align: right;
+  padding: 100px 200px;
+  .chef {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  img {
+    max-width: 500px;
+  }
+  h2 {
+    margin: 0.5rem 0 1rem;
+  }
+  h4 {
+    padding-bottom: 1rem;
+  }
+  p {
+    color: $paragraphColor;
+    line-height: 1.4;
+    padding-bottom: 1rem;
+    font-weight: 300;
+  }
+  .arrows {
+    font-size: 1.5rem;
+    color: $titleColor;
+    .fa-arrow-left {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .fa-arrow-right {
+      cursor: pointer;
+    }
+
+    .ready {
+      color: $blackTitle;
+    }
+  }
+}

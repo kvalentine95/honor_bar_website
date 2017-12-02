@@ -6,12 +6,14 @@
     color: $paragraphColor;
     line-height: 1.8;
     margin: 0.5rem 0 2rem;
+    font-weight: 300;
   }
 
   .quote {
     color: $paragraphColor;
     margin-bottom: 2rem;
     line-height: 1.8;
+    font-weight: 300;
     strong {
       font-weight: 700;
       color: $blackTitle;
