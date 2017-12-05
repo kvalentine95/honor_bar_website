@@ -6,7 +6,7 @@ export default function SpecialMenu({state, actions}) {
       return(
         <div class="col-md-4">
           <div class="box">
-            <div class="box-image1">
+            <div class={item.classTitle}>
               <div class="price-circle">${item.price}</div>
             </div>
             <span class="title">{item.title}</span>

@@ -125,15 +125,18 @@ var companyInfo = {
 var specialMenuData = [{
   title: 'Honor Burger',
   description: 'Fresh ground chuck, cheddar & tomato, topped with coleslaw',
-  price: 15
+  price: 15,
+  classTitle: 'box-image1'
 }, {
   title: 'Veggie Club',
   description: 'Persian cucumber, French feta, avocado, arugula & pickled onion',
-  price: 14
+  price: 14,
+  classTitle: 'box-image2'
 }, {
   title: 'Hand-Cut French Fries',
   description: 'U.S.#1 Kennebec potatoes, served with dipping sauces',
-  price: 5
+  price: 5,
+  classTitle: 'box-image3'
 }];
 var globalState = exports.globalState = {
   count: 0,
@@ -623,7 +626,7 @@ function SpecialMenu(_ref) {
           { "class": "box" },
           (0, _hyperapp.h)(
             "div",
-            { "class": "box-image1" },
+            { "class": item.classTitle },
             (0, _hyperapp.h)(
               "div",
               { "class": "price-circle" },
