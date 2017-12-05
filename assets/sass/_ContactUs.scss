@@ -1,0 +1,40 @@
+#ContactUs {
+  padding: 100px 200px;
+  text-align: center;
+  .box {
+    background: #fff;
+    padding: 70px;
+  }
+  .title {
+    font-family: 'Rozha One', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .address {
+    font-weight: 600;
+    color: $titleColor;
+    line-height: 1.5;
+  }
+  p {
+    color: $paragraphColor;
+    font-weight: 600;
+    padding-top: 10px;
+    strong {
+      color: $blackTitle;
+      text-transform: capitalize;
+      font-weight: 600;
+    }
+    a {
+      color: $paragraphColor;
+      text-decoration: none;
+      &:hover{
+        color: orange;
+      }
+    }
+  }
+
+  h5 {
+    margin:0 0 20px 0;
+
+  }
+}
