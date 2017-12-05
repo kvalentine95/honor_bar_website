@@ -1,0 +1,33 @@
+footer {
+  padding: 100px 0;
+  background: $footerBack;
+  nav {
+    text-align: center;
+    margin: 20px auto;
+    a {
+      color: #fff;
+      display: inline-block;
+      padding: 10px 20px 10px 0;
+      text-decoration: none;
+    }
+  }
+  .social_media {
+    margin: 0 0 20px;
+    padding: 0;
+    text-align: center;
+    li {
+      display: inline-block;
+      padding: 10px;
+      a {
+        color: #fff;
+        &:hover {
+          color: orange;
+        }
+      }
+    }
+  }
+  .copyright {
+    color: $titleColor;
+    text-align: center;
+  }
+}
