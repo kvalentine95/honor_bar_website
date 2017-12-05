@@ -116,8 +116,29 @@ function App(_ref) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var companyInfo = {
+  title: 'Be Honored',
+  phone: '(408)-768-9986',
+  location: 'Los Angeles, California'
+};
+var specialMenuData = [{
+  title: 'Honor Burger',
+  description: 'Fresh ground chuck, cheddar & tomato, topped with coleslaw',
+  price: 15
+}, {
+  title: 'Veggie Club',
+  description: 'Persian cucumber, French feta, avocado, arugula & pickled onion',
+  price: 14
+}, {
+  title: 'Hand-Cut French Fries',
+  description: 'U.S.#1 Kennebec potatoes, served with dipping sauces',
+  price: 5
+}];
 var globalState = exports.globalState = {
-  count: 0
+  count: 0,
+  companyInfo: companyInfo,
+  specialMenuData: specialMenuData
 };
 
 /***/ }),
@@ -162,7 +183,7 @@ function ContactUs(_ref) {
             (0, _hyperapp.h)(
               "div",
               { "class": "title" },
-              "Los Angeles, California"
+              state.companyInfo.location
             ),
             (0, _hyperapp.h)(
               "p",
@@ -197,7 +218,8 @@ function ContactUs(_ref) {
             (0, _hyperapp.h)(
               "div",
               { "class": "title" },
-              "+ (408) - 768 - 9986"
+              "+ ",
+              state.companyInfo.phone
             ),
             (0, _hyperapp.h)(
               "p",
@@ -591,6 +613,38 @@ function SpecialMenu(_ref) {
   var state = _ref.state,
       actions = _ref.actions;
 
+  var loopMenu = function loopMenu() {
+    return state.specialMenuData.map(function (item) {
+      return (0, _hyperapp.h)(
+        "div",
+        { "class": "col-md-4" },
+        (0, _hyperapp.h)(
+          "div",
+          { "class": "box" },
+          (0, _hyperapp.h)(
+            "div",
+            { "class": "box-image1" },
+            (0, _hyperapp.h)(
+              "div",
+              { "class": "price-circle" },
+              "$",
+              item.price
+            )
+          ),
+          (0, _hyperapp.h)(
+            "span",
+            { "class": "title" },
+            item.title
+          ),
+          (0, _hyperapp.h)(
+            "p",
+            { "class": "details" },
+            item.description
+          )
+        )
+      );
+    });
+  };
   return (0, _hyperapp.h)(
     "section",
     { id: "SpecialMenu", "class": "texture" },
@@ -610,87 +664,7 @@ function SpecialMenu(_ref) {
       (0, _hyperapp.h)(
         "div",
         { "class": "row boxes" },
-        (0, _hyperapp.h)(
-          "div",
-          { "class": "col-md-4" },
-          (0, _hyperapp.h)(
-            "div",
-            { "class": "box" },
-            (0, _hyperapp.h)(
-              "div",
-              { "class": "box-image1" },
-              (0, _hyperapp.h)(
-                "div",
-                { "class": "price-circle" },
-                "$15"
-              )
-            ),
-            (0, _hyperapp.h)(
-              "span",
-              { "class": "title" },
-              "Honor Burger"
-            ),
-            (0, _hyperapp.h)(
-              "p",
-              { "class": "details" },
-              "Fresh ground chuck, cheddar & tomato, topped with coleslaw"
-            )
-          )
-        ),
-        (0, _hyperapp.h)(
-          "div",
-          { "class": "col-md-4" },
-          (0, _hyperapp.h)(
-            "div",
-            { "class": "box" },
-            (0, _hyperapp.h)(
-              "div",
-              { "class": "box-image2" },
-              (0, _hyperapp.h)(
-                "div",
-                { "class": "price-circle" },
-                "$14"
-              )
-            ),
-            (0, _hyperapp.h)(
-              "span",
-              { "class": "title" },
-              "Veggie Club"
-            ),
-            (0, _hyperapp.h)(
-              "p",
-              { "class": "details" },
-              "Persian cucumber, French feta, avocado, arugula & pickled onion"
-            )
-          )
-        ),
-        (0, _hyperapp.h)(
-          "div",
-          { "class": "col-md-4" },
-          (0, _hyperapp.h)(
-            "div",
-            { "class": "box" },
-            (0, _hyperapp.h)(
-              "div",
-              { "class": "box-image3" },
-              (0, _hyperapp.h)(
-                "div",
-                { "class": "price-circle" },
-                "$5"
-              )
-            ),
-            (0, _hyperapp.h)(
-              "span",
-              { "class": "title" },
-              "Hand-Cut French Fries"
-            ),
-            (0, _hyperapp.h)(
-              "p",
-              { "class": "details" },
-              "U.S.#1 Kennebec potatoes, served with dipping sauces"
-            )
-          )
-        )
+        loopMenu()
       ),
       (0, _hyperapp.h)(
         "a",
@@ -738,7 +712,7 @@ function TopImg(_ref) {
         (0, _hyperapp.h)(
           "h1",
           null,
-          "Be Honored"
+          state.companyInfo.title
         )
       ),
       (0, _hyperapp.h)(
@@ -802,7 +776,7 @@ var _App2 = _interopRequireDefault(_App);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _hyperapp.app)({
-  state: { globalState: _globalState.globalState },
+  state: _globalState.globalState,
   view: function view(state, actions) {
     return (0, _hyperapp.h)(_App2.default, { state: state, actions: actions });
   },

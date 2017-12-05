@@ -9,7 +9,7 @@ export default function ContactUs({state, actions}) {
           <div class="row">
             <div class="col-md-6">
               <div class="title">
-                Los Angeles, California
+                {state.companyInfo.location}
               </div>
               <p class="address">122 South Beverly Drive<br/>
                 Beverly Hills, California 90212</p>
@@ -18,7 +18,7 @@ export default function ContactUs({state, actions}) {
             <div class="col-md-6">
               <h5>Call directly</h5>
               <div class="title">
-                + (408) - 768 - 9986
+                + {state.companyInfo.phone}
               </div>
               <p>
                 <strong>Sun – Thurs:</strong>	11:30am – 11pm

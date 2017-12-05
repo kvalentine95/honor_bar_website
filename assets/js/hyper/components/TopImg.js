@@ -6,7 +6,7 @@ export default function TopImg({state, actions}) {
       <div class="container">
         <div class="title">
           <h5>Welcome</h5>
-          <h1>Be Honored</h1>
+          <h1>{state.companyInfo.title}</h1>
         </div>
         <div class="contact-info">
           <div class="booking">Book Table Directly</div>
