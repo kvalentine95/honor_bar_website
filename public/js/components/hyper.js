@@ -138,10 +138,35 @@ var specialMenuData = [{
   price: 5,
   classTitle: 'box-image3'
 }];
+
+var reviews = [{
+  review: 'I\'ve heard only good things about Honor Bar and I finally got to try it for myself this past weekend. Everyone says you have to try the chucked sandwich, you must! 100% one of the best chicken sandwiches I\'ve ever had. Enjoyed it with a nice glass of rosé, it was lovely. The restaurant is on the smaller side so If you go on a busy day like the weekends there\'s likely to be a wait. Highly recommend waiting for a table outside if it\'s a nice day out. All in all the staff was great, food was delicious, and the experience lived up to the hype. Don\'t miss out on this place!',
+  highlight: 'Best restaurant in the LA area',
+  company: 'The Food Network'
+}, {
+  review: 'I\'ve heard only good things about Honor Bar and I finally got to try it for myself this past weekend. Everyone says you have to try the chucked sandwich, you must! 100% one of the best chicken sandwiches I\'ve ever had. Enjoyed it with a nice glass of rosé, it was lovely. The restaurant is on the smaller side so If you go on a busy day like the weekends there\'s likely to be a wait. Highly recommend waiting for a table outside if it\'s a nice day out. All in all the staff was great, food was delicious, and the experience lived up to the hype. Don\'t miss out on this place!',
+  highlight: 'Best restaurant. Period.',
+  company: 'HBO'
+}, {
+  review: 'I\'ve heard only good things about Honor Bar and I finally got to try it for myself this past weekend. Everyone says you have to try the chucked sandwich, you must! 100% one of the best chicken sandwiches I\'ve ever had. Enjoyed it with a nice glass of rosé, it was lovely. The restaurant is on the smaller side so If you go on a busy day like the weekends there\'s likely to be a wait. Highly recommend waiting for a table outside if it\'s a nice day out. All in all the staff was great, food was delicious, and the experience lived up to the hype. Don\'t miss out on this place!',
+  highlight: 'Fast and modern',
+  company: 'LA Times'
+}];
+
+var randomQuote = [{
+  author: 'Jacques Pepin',
+  quote: 'Great cooking favors the prepared hands'
+}];
+
 var globalState = exports.globalState = {
   count: 0,
   companyInfo: companyInfo,
-  specialMenuData: specialMenuData
+  specialMenuData: specialMenuData,
+  reviews: reviews,
+  reviewStatus: {
+    currentReview: 2
+  }
+
 };
 
 /***/ }),
@@ -546,6 +571,30 @@ function Reviews(_ref) {
   var state = _ref.state,
       actions = _ref.actions;
 
+  var currentReview = function currentReview() {
+    return (0, _hyperapp.h)(
+      "div",
+      null,
+      (0, _hyperapp.h)(
+        "h2",
+        null,
+        state.reviews[state.reviewStatus.currentReview].company
+      ),
+      (0, _hyperapp.h)(
+        "h4",
+        null,
+        "\"",
+        state.reviews[state.reviewStatus.currentReview].highlight,
+        "\""
+      ),
+      (0, _hyperapp.h)(
+        "p",
+        null,
+        state.reviews[state.reviewStatus.currentReview].review
+      ),
+      (0, _hyperapp.h)("div", { "class": "author" })
+    );
+  };
   return (0, _hyperapp.h)(
     "section",
     { id: "Reviews" },
@@ -568,27 +617,12 @@ function Reviews(_ref) {
             { "class": "comp-title" },
             "Reviews"
           ),
-          (0, _hyperapp.h)(
-            "h2",
-            null,
-            "The Food Network"
-          ),
-          (0, _hyperapp.h)(
-            "h4",
-            null,
-            "\"Best restaurant in the LA area\""
-          ),
-          (0, _hyperapp.h)(
-            "p",
-            null,
-            "Honor Bar is a nice and chill bar. Gets a good deal of traffic based on where it is and since I live in the neighborhood it's easy to say because there really aren't very many bars at all in the Beverly Hills area that makes sense. The Ambiance is really cool. They are usually showing a game of some sort so it gives you that sports bar feel a little bit on the upscale side. Decently priced food and drinks. As well as the fact the food itself is pretty good. I find myself here all the time. If you're in the area it is definitely recommended."
-          ),
-          (0, _hyperapp.h)("div", { "class": "author" }),
+          currentReview(),
           (0, _hyperapp.h)(
             "div",
             { "class": "arrows" },
-            (0, _hyperapp.h)("i", { "class": "fa fa-arrow-left", "aria-hidden": "true" }),
-            (0, _hyperapp.h)("i", { "class": "fa fa-arrow-right ready", "aria-hidden": "true" })
+            (0, _hyperapp.h)("i", { "class": "fa fa-arrow-left " + (state.reviewStatus.currentReview > 0 ? 'ready' : ''), "aria-hidden": "true" }),
+            (0, _hyperapp.h)("i", { "class": "fa fa-arrow-right " + (state.reviewStatus.currentReview == state.reviews.length - 1 ? '' : 'ready'), "aria-hidden": "true" })
           )
         )
       )
