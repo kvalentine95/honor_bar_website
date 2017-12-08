@@ -18,13 +18,18 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var actions = exports.actions = {
-  up: up,
+  reviewRightClick: reviewRightClick,
+  reviewLeftClick: reviewLeftClick,
   intro: intro,
   showMenu: showMenu
 };
 
-function up(state, actions) {
-  return { count: state.count + 1 };
+function reviewRightClick(state, actions) {
+  return { reviewStatus: { currentReview: state.reviewStatus.currentReview + 1 } };
+}
+
+function reviewLeftClick(state, actions) {
+  return { reviewStatus: { currentReview: state.reviewStatus.currentReview - 1 } };
 }
 
 function showMenu() {}
@@ -164,7 +169,7 @@ var globalState = exports.globalState = {
   specialMenuData: specialMenuData,
   reviews: reviews,
   reviewStatus: {
-    currentReview: 2
+    currentReview: 0
   }
 
 };
@@ -595,6 +600,17 @@ function Reviews(_ref) {
       (0, _hyperapp.h)("div", { "class": "author" })
     );
   };
+
+  var leftClickButton = function leftClickButton() {
+    if (state.reviewStatus.currentReview == 0) {} else {
+      actions.reviewLeftClick();
+    }
+  };
+  var rightClickButton = function rightClickButton() {
+    if (state.reviewStatus.currentReview == state.reviews.length - 1) {} else {
+      actions.reviewRightClick();
+    }
+  };
   return (0, _hyperapp.h)(
     "section",
     { id: "Reviews" },
@@ -621,8 +637,8 @@ function Reviews(_ref) {
           (0, _hyperapp.h)(
             "div",
             { "class": "arrows" },
-            (0, _hyperapp.h)("i", { "class": "fa fa-arrow-left " + (state.reviewStatus.currentReview > 0 ? 'ready' : ''), "aria-hidden": "true" }),
-            (0, _hyperapp.h)("i", { "class": "fa fa-arrow-right " + (state.reviewStatus.currentReview == state.reviews.length - 1 ? '' : 'ready'), "aria-hidden": "true" })
+            (0, _hyperapp.h)("i", { onclick: leftClickButton, "class": "fa fa-arrow-left " + (state.reviewStatus.currentReview > 0 ? 'ready' : ''), "aria-hidden": "true" }),
+            (0, _hyperapp.h)("i", { onclick: rightClickButton, "class": "fa fa-arrow-right " + (state.reviewStatus.currentReview == state.reviews.length - 1 ? '' : 'ready'), "aria-hidden": "true" })
           )
         )
       )

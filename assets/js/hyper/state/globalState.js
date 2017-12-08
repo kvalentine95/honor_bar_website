@@ -56,7 +56,7 @@ export const globalState = {
   specialMenuData,
   reviews,
   reviewStatus: {
-    currentReview: 2,
+    currentReview: 0,
   }
 
 }

@@ -1,12 +1,19 @@
 export const actions = {
-  up,
+  reviewRightClick,
+  reviewLeftClick,
   intro,
   showMenu
 }
 
-function up (state, actions) {
+function reviewRightClick (state,actions) {
   return (
-    {count: state.count + 1}
+    {reviewStatus: {currentReview: state.reviewStatus.currentReview+1}}
+  )
+}
+
+function reviewLeftClick (state,actions) {
+  return (
+    {reviewStatus: {currentReview: state.reviewStatus.currentReview-1}}
   )
 }
 

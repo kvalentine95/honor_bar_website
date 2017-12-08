@@ -11,6 +11,21 @@ export default function Reviews({state, actions}) {
       </div>
     )
   }
+
+  var leftClickButton = function() {
+    if (state.reviewStatus.currentReview == 0) {
+
+    } else {
+      actions.reviewLeftClick()
+    }
+  }
+  var rightClickButton = function() {
+    if (state.reviewStatus.currentReview == (state.reviews.length - 1)) {
+
+    } else {
+      actions.reviewRightClick()
+    }
+  }
   return (
     <section id="Reviews">
       <div class="container">
@@ -22,8 +37,8 @@ export default function Reviews({state, actions}) {
             <h5 class="comp-title">Reviews</h5>
             {currentReview()}
             <div class="arrows">
-              <i class={`fa fa-arrow-left ${(state.reviewStatus.currentReview > 0) ? 'ready' : ''}`}aria-hidden="true"></i>
-              <i class={`fa fa-arrow-right ${(state.reviewStatus.currentReview == state.reviews.length-1) ? '': 'ready'}`}aria-hidden="true"></i>
+              <i onclick={leftClickButton} class={`fa fa-arrow-left ${(state.reviewStatus.currentReview > 0) ? 'ready' : ''}`}aria-hidden="true"></i>
+              <i onclick = {rightClickButton} class={`fa fa-arrow-right ${(state.reviewStatus.currentReview == state.reviews.length-1) ? '': 'ready'}`}aria-hidden="true"></i>
             </div>
           </div>
         </div>
