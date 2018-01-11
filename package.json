@@ -1,5 +1,5 @@
 {
-  "name": "hyperapp-starter-kit",
+  "name": "honor_bar_website",
   "version": "1.0.0",
   "description": "cool and fast way to run hyperapp",
   "main": "gulpfile.js",
@@ -29,11 +29,13 @@
     "sass-loader": "^6.0.3",
     "standard": "^10.0.2",
     "webpack": "^2.7.0",
-    "webpack-stream": "^3.2.0"
+    "webpack-stream": "^3.2.0",
+    "micro": "latest"
   },
   "scripts": {
     "bundle": "./node_modules/.bin/webpack",
     "production": "./node_modules/.bin/webpack -p",
+    "start": "micro",
     "watch": "gulp",
     "sass": "gulp styles",
     "js": "gulp webpack"
@@ -43,15 +45,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codingphasedotcom/hyperapp-starterkit.git"
+    "url": "git+https://github.com/kvalentine95/honor_bar_website"
   },
   "keywords": [
     "hyperapp"
   ],
-  "author": "joe santos garcia",
-  "license": "ISC",
+  "author": "val",
+  "license": "val",
   "bugs": {
     "url": "https://github.com/codingphasedotcom/hyperapp-starterkit/issues"
   },
-  "homepage": "https://github.com/codingphasedotcom/hyperapp-starterkit#readme"
+  "homepage": "https://github.com/kvalentine95/honor_bar_website#readme"
+
 }

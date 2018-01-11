@@ -124,7 +124,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var companyInfo = {
   title: 'Be Honored',
-  phone: '(408)-768-9986',
+  phone: '(310)-550-2092',
   location: 'Los Angeles, California'
 };
 var specialMenuData = [{
@@ -779,7 +779,7 @@ function TopImg(_ref) {
         (0, _hyperapp.h)(
           "h2",
           null,
-          "(408) 768 9986"
+          "(310) 550 2092"
         ),
         (0, _hyperapp.h)(
           "div",
